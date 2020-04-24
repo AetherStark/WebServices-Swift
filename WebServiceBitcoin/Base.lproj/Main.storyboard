@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcC-uW-A5V">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebServiceBitcoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMz-gQ-5rz">
+                                <rect key="frame" x="103" y="314" width="208" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="29h-ZC-ZCT"/>
+                                    <constraint firstAttribute="width" secondItem="fMz-gQ-5rz" secondAttribute="height" multiplier="52:27" id="odh-5C-6Qt"/>
+                                    <constraint firstAttribute="width" constant="208" id="sQb-x2-kmk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Calcular Moneda"/>
+                                <connections>
+                                    <action selector="btnConsultar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXG-2i-GL5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Francisco Lara López" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRg-OT-rl8">
+                                <rect key="frame" x="111" y="108" width="192" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="LD4-QQ-nOa"/>
+                                    <constraint firstAttribute="width" secondItem="RRg-OT-rl8" secondAttribute="height" multiplier="64:7" id="tpo-cX-fhV"/>
+                                    <constraint firstAttribute="height" constant="21" id="uO8-8s-zFX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RRg-OT-rl8" firstAttribute="centerX" secondItem="fMz-gQ-5rz" secondAttribute="centerX" id="7we-bQ-eoP"/>
+                            <constraint firstItem="RRg-OT-rl8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="DAD-ug-e2T"/>
+                            <constraint firstItem="fMz-gQ-5rz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBb-Dm-c0v"/>
+                            <constraint firstItem="fMz-gQ-5rz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WMm-Vn-4Nn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a6w-oS-koV"/>
+                    <connections>
+                        <segue destination="nDf-jx-cdN" kind="show" identifier="segue" id="JVz-RP-7F5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
+        </scene>
+        <!--Francisco Lara López-->
+        <scene sceneID="w8n-Hz-dkF">
+            <objects>
+                <tableViewController id="nDf-jx-cdN" customClass="TableViewController" customModule="WebServiceBitcoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lEJ-BB-NaB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" textLabel="TDn-BG-bVw" detailTextLabel="NSf-Dv-DSE" style="IBUITableViewCellStyleSubtitle" id="8DI-lo-PBP" customClass="TableViewCell" customModule="WebServiceBitcoin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8DI-lo-PBP" id="W4Y-Nv-Clw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TDn-BG-bVw">
+                                            <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NSf-Dv-DSE">
+                                            <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblSubtitulo" destination="NSf-Dv-DSE" id="2xO-2u-bPv"/>
+                                    <outlet property="lblTitulo" destination="TDn-BG-bVw" id="mE2-tV-WSY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nDf-jx-cdN" id="5Pn-o4-4R5"/>
+                            <outlet property="delegate" destination="nDf-jx-cdN" id="e8F-Ur-CZ7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Francisco Lara López" id="1oS-cz-CbJ"/>
+                    <connections>
+                        <outlet property="Tabla" destination="lEJ-BB-NaB" id="Tng-1c-DkF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4DG-cE-RPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bdo-05-o6l">
+            <objects>
+                <navigationController id="zcC-uW-A5V" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b0u-wO-X0T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="INm-Xf-E7O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUX-NG-nP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="139"/>
+        </scene>
+    </scenes>
+</document>
